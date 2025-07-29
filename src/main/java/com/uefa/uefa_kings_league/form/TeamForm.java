@@ -2,7 +2,7 @@ package com.uefa.uefa_kings_league.form;
 
 import java.time.LocalDate;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Data
@@ -10,17 +10,17 @@ import lombok.*;
 @AllArgsConstructor
 public class TeamForm {
 
-    @NotBlank
+    @NotBlank //ne s'applique du'aux chaînes de caractères (String)
     private String teamName;
     @NotBlank
     private String teamCity;
     @NotBlank
     private String teamCountry;
-    @NotBlank
-    private LocalDate teamfoundation;
+    @NotNull
+    private LocalDate teamFoundation;
     @NotBlank
     private String teamStadium;
-    @NotBlank
+    @Min(0)
     private int teamTitle;
 
 }
