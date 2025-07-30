@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.uefa.uefa_kings_league.form.TeamForm;
@@ -39,7 +40,7 @@ public class TeamController {
         return "team-form";
     }
 
-    @GetMapping("/create")
+    @PostMapping("/create")
     public String createTeam(@Valid @ModelAttribute TeamForm teamForm, BindingResult results) {
         if (results.hasErrors()) {
             return "team-form";
