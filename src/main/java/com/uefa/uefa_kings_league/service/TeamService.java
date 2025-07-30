@@ -7,12 +7,11 @@ import com.uefa.uefa_kings_league.model.Team;
 import com.uefa.uefa_kings_league.repository.TeamRepositoryInterface;
 
 @Service
-public class TeamService implements ServiceInterface {
+public class TeamService {
 
     @Autowired
     private TeamRepositoryInterface teamRepository;
 
-    @Override
     public Team createTeam(Team team) {
         return teamRepository.save(team);
     }

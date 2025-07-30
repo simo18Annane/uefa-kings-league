@@ -19,7 +19,7 @@
             <p>Team title<input type="number" th:field="*{teamTitle}" min="0" step="1"/></p>
             <div th:if="${#fields.hasErrors('teamTitle')}" th:errors="*{teamTitle}"></div>
             <div></div>
-            <input type="submit" value="OK"/>
+            <input type="submit" value="Valider"/>
         </form>
     </body>
 </html>
