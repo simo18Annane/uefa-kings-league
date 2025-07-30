@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Création du club</title>
+    </head>
+    <body>
+        <form th:action="@{/team/create}" method="POST" th:object="${teamForm}">
+            <p>Team name<input type="text" th:field="*{teamName}"/></p>
+            <div th:if="${#fields.hasErrors('teamName')}" th:errors="*{teamName}"></div>
+            <p>Team city<input type="text" th:field="*{teamCity}"/></p>
+            <div th:if="${#fields.hasErrors('teamCity')}" th:errors="*{teamCity}"></div>
+            <p>Team country<input type="text" th:field="*{teamCountry}"/></p>
+            <div th:if="${#fields.hasErrors('teamCountry')}" th:errors="*{teamCountry}"></div>
+            <p>Team foundation<input type="date" th:field="*{teamFoundation}"/></p>
+            <div th:if="${#fields.hasErrors('teamFoundation')}" th:errors="*{teamFoundation}"></div>
+            <p>Team stadium<input type="text" th:field="*{teamStadium}"/></p>
+            <div th:if="${#fields.hasErrors('teamStadium')}" th:errors="*{teamStadium}"></div>
+            <p>Team title<input type="number" th:field="*{teamTitle}" min="0" step="1"/></p>
+            <div th:if="${#fields.hasErrors('teamTitle')}" th:errors="*{teamTitle}"></div>
+            <div></div>
+            <input type="submit" value="OK"/>
+        </form>
+    </body>
+</html>
