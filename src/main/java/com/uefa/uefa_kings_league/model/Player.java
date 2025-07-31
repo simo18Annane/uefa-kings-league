@@ -17,10 +17,10 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, name = "firstName")
+    @Column(nullable = false, name = "first_name")
     private String firstName;
 
-    @Column(nullable = false, name = "lastName")
+    @Column(nullable = false, name = "last_name")
     private String lastName;
 
     @Column(nullable = false, name = "nationality")
@@ -32,7 +32,7 @@ public class Player {
     @Column(nullable = false, name = "position")
     private String position;
 
-    @Column(nullable = false, name = "shirtNumber")
+    @Column(nullable = false, name = "shirt_number")
     private int shirtNumber;
 
 }

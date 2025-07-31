@@ -37,7 +37,7 @@ public class PlayerController {
     @PostMapping("/create")
     public String createPlayer(@Valid @ModelAttribute PlayerForm playerForm, BindingResult results) {
         if (results.hasErrors()) {
-            return "team-form";
+            return "player-form";
         }
         Player player = new Player();
         player.setFirstName(playerForm.getFirstName());
